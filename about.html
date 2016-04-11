@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>WorkflowsToday.com</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="content-language" content="en-us" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="styles/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/slick-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/style.css"/>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/jquery.visible.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/actions.js"></script>
+		<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+		<script src="js/map.js"></script>
+	</head>
+	<body>
+		<div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Login and register</h4>
+			  </div>
+			  <div class="modal-body">
+				<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-6">
+							<h3 class="blue"><img src="images/registrationIcon.png">Registration</h3>
+							<div class="contactForm">
+								<div class="form-group">
+									<input type="text" class="form-control" id="exampleInputName2" placeholder="First name">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id="exampleInputName2" placeholder="Last name">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id="exampleInputName2" placeholder="Email">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id="exampleInputName2" placeholder="Username">
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeat password">
+								</div>
+								<div class="buttonHolderArticle">
+									<div class="buttonOrange"><a href="#">REGISTER</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-6">
+							<h3 class="blue"><i class="fa fa-key"></i>Login</h3>
+							<div class="contactForm">
+								<div class="form-group">
+									<input type="text" class="form-control" id="exampleInputName2" placeholder="Username">
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+								</div>
+								<div class="buttonHolderArticle">
+									<div class="buttonBlue"><a href="#">LOGIN</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<header>
+			<div class="headerWrapVisible" id="headerWrap">
+				<!-- Header -->
+	            <div class="menuIndex">
+	                <div class="menuContainer">
+	                    <div class="row menuPosition">
+	                            <!-- Company Logo -->
+	                            <a href="index.html"><img src="images/logo.png" class="logoStyle" /></a>
+	
+	                            <div class="clearRight"></div>
+	                            <div class="menuButton"><i class="fa fa-bars"></i></div>
+	
+	                            <!-- Search -->
+	                            <input class="search" type="text" />
+	
+	                            <!-- Main Menu -->
+							<nav class="menu">
+								<ul class="menuFloat">
+									<li class="menuInsideFloat"><div class="menuText blue"><a href="index.html">Home</a></div></li>
+									<li class="menuInsideFloat"><div class="menuText blue"><a href="products.html">Products</a></div></li>
+									<li class="menuInsideFloat"><div class="menuText blue"><a href="blog.html">Blog</a></div></li>
+									<li class="menuInsideFloat"><div class="menuText blue"><a href="aboutUs.html">About</a></div></li>
+									<li class="language">
+		                                <div class="menuInsideFloat">
+		                                    <div class="menuText"><a href="#">en<i class="fa fa-angle-down"></i></a></div>
+		                                </div>
+		                                <ul class="menuFloat langDropdown">
+		                                    <li class="menuInsideFloat"><div class="menuText"><a href="#">es</a></div></li>
+		                                    <li class="menuInsideFloat"><div class="menuText"><a href="#">jp</a></div></li>
+		                                </ul>
+		                            </li>
+								</ul>
+							</nav>
+	                            <!-- end // Main Menu -->
+	                    </div>
+	                </div>
+	            </div>
+	            <!-- end // Header -->
+				 <div id="map_canvas"></div>
+				 <script src="http://spreadsheets.google.com/feeds/list/0AkIRnGqm7QYBdDZnMVM3QVJ3cmwzeW1ZQWJhREdXT3c/od6/public/values?alt=json-in-script&callback=setMarkers" type="text/javascript"></script>
+			</div>
+		</header>
+		<div id="articleWrap">
+			<div class="container">
+				<div class="row">
+					<div class="articlePic col-xs-12 col-sm-6 col-md-4">
+						<img src="images/logoGQI.png" class="pic2"/>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-8">
+						<article class="articles articleTextBlue">
+							<h3>The GQI Group: Company Background</h3>
+							<p>The Global Quality Institute (GQI) Group was founded in 1996 by Bush Prakash (President and CEO) and for over 20 years is engaged in providing world-class ISO 9001, ISO/TS 16949, ISO 14001, OHSAS 18001 education, consulting and workflow management software services. </p>
+							<p>The journey that the GQI team has embarked on is one of converting first-hand experience of auditing to ISO standards, management consulting and training into a comprehensive and integrated software system that goes by the overarching name of ISOQuest. Initially conceived and developed in the United States, it is built to equip companies with the leading edge tools necessary to implement and maintain a robust quality management process and keep up-to-speed with the latest revisions of the applicable ISO standards.</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr />
+        <!-- Company Icons -->
+	    <div id="aboutUsIconsWrap">
+	        <div class="container">
+	            <h2 class="text-center blue ">Quality software solution provider you can trust</h2>
+	            <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                <div class="aboutUsIconHolder">
+                    <a href="#"><img class="pulseIcon" src="images/icons/foundedInNewIcon.png" data-hover="images/icons/foundedInNewIcon.png" /></a>
+                    <h4 class="blue textPosition">Company founded back in 1995</h4>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                <div class="aboutUsIconHolder">
+                    <a href="#"><img class="pulseIcon" src="images/icons/usersAndGrowingIcon.png" data-hover="images/icons/usersAndGrowingIcon.png" /></a>
+                    <h4 class="blue textPosition">150,000 users and growing</h4>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                <div class="aboutUsIconHolder">
+                    <a href="#"><img class="pulseIcon" src="images/icons/releaseCycleIcon.png" data-hover="images/icons/releaseCycleIcon.png" /></a>
+                    <h4 class="blue textPosition">2 months<br />release cycle</h4>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                <div class="aboutUsIconHolder">
+                    <a href="#"><img class="pulseIcon" src="images/icons/supportAndResponceIcon.png" data-hover="images/icons/supportAndResponceIcon.png" /></a>
+                    <h4 class="blue textPosition">24/7 support desk<br />30min response time</h4>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                <div class="aboutUsIconHolder">
+                    <a href="#"><img class="pulseIcon" src="images/icons/onlineTrainigIcon.png" data-hover="images/icons/onlineTrainigIcon.png" /></a>
+                    <h4 class="blue textPosition">Online training and consulting</h4>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                <div class="aboutUsIconHolder">
+                    <a href="#"><img class="pulseIcon" src="images/icons/platformNewIcon.png" data-hover="images/icons/platformNewIcon.png" /></a>
+                    <h4 class="blue textPosition">Platform available on the web, tablet and mobile</h4>
+                </div>
+            </div>
+        </div>
+	        </div>
+	    </div>
+	    <!-- end // Company Icons -->
+    <!-- Client Logos Slider -->
+    <div id="clientsListWrap">
+        <div class="clientsTitle"><h2 class="blue textPosition">Industry leaders choose ISOQuest</h2></div>
+        <div class="clientsSliderHolder">
+            <img src="images/previous-arrow-blue.png" class="previousArrow" />
+            <img src="images/next-arrow-blue.png" class="nextArrow" />
+            <div class="container">
+                <div class="row sliderSlick">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="clientsSlider">
+                            <img src="images/client-logos/logo_agc.jpg" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="clientsSlider">
+                            <img src="images/client-logos/logo_colfax.jpg" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="clientsSlider">
+                            <img src="images/client-logos/logo_degussa.png" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="clientsSlider">
+                            <img src="images/client-logos/logo_evonik.png" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="clientsSlider">
+                            <img src="images/client-logos/logo_flowserve.jpg" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="clientsSlider">
+                            <img src="images/client-logos/logo_honda.png" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="clientsSlider">
+                            <img src="images/client-logos/logo_lear.png" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="clientsSlider">
+                            <img src="images/client-logos/logo_lpag.svg" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="clientsSlider">
+                            <img src="images/client-logos/logo_masterloy.png" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="clientsSlider">
+                            <img src="images/client-logos/logo_omg.png" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="clientsSlider">
+                            <img src="images/client-logos/logo_schukra.png" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="clientsSlider">
+                            <img src="images/client-logos/logo_trelleborg.png" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="clientsSlider">
+                            <img src="images/client-logos/logo_umicore.png" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="clientsSlider">
+                            <img src="images/client-logos/logo_vigon.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end // Clients Slider -->
+
+
+        <!-- Footer -->
+        <div id="contactForm">
+            <div class="container">
+                <div class="row">
+                    <h2 class="white text-center">Contact us to find out more</h2>
+                    <div class="col-md-12">
+                        <form>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" class="contactFormInput" placeholder="Name" />
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" class="contactFormInput" placeholder="Business email" />
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <textarea class="contactFormInput" placeholder="Message"></textarea>
+                                <div class="text-center">
+                                    <button class="buttonOrange text-center margin15">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div id="footerBackWrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="contactForm">
+                                <img alt="WorkflowsToday" src="images/logoWhite.png" class="logoFooter" />
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="footerMenus">
+                                <div class="menuTextfooter white"><b>Phone:</b> 	+1 888-238-9051</div>
+                                <div class="menuTextfooter white"><b>Fax:</b> 	+1 877-207-3405</div>
+                                <div class="menuTextfooter white"><b>Email:</b> 	sales@gqigroup.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end // Footer -->
+	</body>
+</html>

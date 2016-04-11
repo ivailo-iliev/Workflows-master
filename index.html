@@ -1,0 +1,607 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>WorkflowsToday.com</title>
+    <meta http-equiv="content-language" content="en-us" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/slick.css" />
+    <link rel="stylesheet" type="text/css" href="styles/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/animate.css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery.visible.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/actions.js"></script>
+</head>
+<body>
+	<!-- Request a demo popup -->
+    <div id="demoModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Interested in a demo?</h4>
+          </div>
+          <div class="modal-body">
+          		<div class="demoForm col-md-12 col-sm-12 col-xs-12">
+					<div class="form-group col-md-12 col-sm-12 col-xs-12">
+						<label class="com-md-4 col-sm-4 col-xs-12">Name</label>
+						<div class="com-md-8 col-sm-8 col-xs-12"><input type="text" class="form-control" id="exampleInputName2"></div>
+					</div>
+					<div class="form-group col-md-12 col-sm-12 col-xs-12">
+						<label class="com-md-4 col-sm-4 col-xs-12">Job title</label>
+						<div class="com-md-8 col-sm-8 col-xs-12"><input type="text" class="form-control" id="exampleInputName2"></div>
+					</div>
+					<div class="form-group col-md-12 col-sm-12 col-xs-12">
+						<label class="com-md-4 col-sm-4 col-xs-12">Company</label>
+						<div class="com-md-8 col-sm-8 col-xs-12"><input type="text" class="form-control" id="exampleInputName2" ></div>
+					</div>
+					<div class="form-group col-md-12 col-sm-12 col-xs-12">
+						<label class="com-md-4 col-sm-4 col-xs-12">Business Email</label>
+						<div class="com-md-8 col-sm-8 col-xs-12"><input type="text" class="form-control" id="exampleInputName2"></div>
+					</div>
+					<div class="form-group col-md-12 col-sm-12 col-xs-12">
+						<label class="com-md-4 col-sm-4 col-xs-12">Phone</label>
+						<div class="com-md-8 col-sm-8 col-xs-12"><input type="password" class="form-control" id="exampleInputPassword1" ></div>
+					</div>
+					<div class="form-group col-md-12 col-sm-12 col-xs-12">
+						<label class="com-md-4 col-sm-4 col-xs-12">Country</label>
+						<div class="com-md-8 col-sm-8 col-xs-12">
+							<select class="form-control">
+								<option>United States</option>
+								<option></option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group col-md-12 col-sm-12 col-xs-12">
+						<label class="com-md-4 col-sm-4 col-xs-12">Prefered Time</label>
+						<div class="com-md-8 col-sm-8 col-xs-12">
+							<select class="form-control">
+								<option>Afternoon</option>
+								<option></option>
+							</select>
+						</div>
+					</div>
+		  		</div>
+		  		<div class="clear"></div>
+          </div>
+          <div class="modal-footer">
+          		<button type="button" class="btn btn-default" data-dismiss="modal">Send</button>
+          		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end // Request a demo popup -->
+
+    <header>
+        <div id="headerWrap">
+            <!-- Header -->
+            <div class="menuIndex">
+                <div class="menuContainer">
+                    <div class="row menuPosition">
+                            <!-- Company Logo -->
+                            <a href="index.html"><img src="images/logo.png" class="logoStyle" /></a>
+
+                            <div class="clearRight"></div>
+                            <div class="menuButton"><i class="fa fa-bars"></i></div>
+
+                            <!-- Search -->
+                            <input class="search" type="text" />
+
+                            <nav class="menu">
+                                <ul class="menuFloat">
+                                    <li class="menuInsideFloat"><div class="menuText blue"><a href="index.html">Home</a></div></li>
+                                    <li class="menuInsideFloat"><div class="menuText blue"><a href="products/">Products</a></div></li>
+                                    <!--<li class="menuInsideFloat"><div class="menuText blue"><a href="blog.html">Blog</a></div></li>-->
+                                    <li class="menuInsideFloat"><div class="menuText blue"><a href="about.html">About</a></div></li>
+                                    <li class="language">
+                                        <div class="menuInsideFloat">
+                                            <div class="menuText"><a href="#">en<i class="fa fa-angle-down"></i></a></div>
+                                        </div>
+                                        <ul class="menuFloat langDropdown">
+                                            <li class="menuInsideFloat"><div class="menuText"><a href="#">es</a></div></li>
+                                            <li class="menuInsideFloat"><div class="menuText"><a href="#">jp</a></div></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- end // Main Menu -->
+                    </div>
+                </div>
+            </div>
+            <!-- end // Header -->
+            <!-- Main Slider -->
+            <div class="headerSlideHolder">
+                <!-- Slide -->
+                <div class="backpic1" style="background-image: url('images/slider/isoquest.jpg');">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 bannerContent">
+                                <article class="articles">
+                                    <h1 class="white">ISOQuest</h1>
+                                    <h3 class="white">Business Processes Management Software</h3>
+                                    <p class="articleTextWhite">
+                                        World class ISO 9001, ISO/TS 16949, ISO 14001 and OHSAS 18001 education, consulting and software services.
+                                        <br /><br />Easy deployment, implementation and operation from the shop floor to the top management backed by the best Customer Service.
+                                    </p>
+                                </article>
+                                <div class="buttonHolderHeader">
+                                    <div class="buttonBlue"><a href="products.html">Our 360&deg; Solution</a></div>
+                                </div>
+                                <div class="buttonHolderHeader">
+                                    <div class="buttonBlue"><a href="#" data-toggle="modal" data-target="#videoModal">See the Video</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end // Slide -->
+                <!-- Slide -->
+                <div class="backpic1" style="background-image: url('images/slider/docuquest.jpg');">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 bannerContent">
+                                <article class="articles">
+                                    <h1 class="white">DocuQuest</h1>
+                                    <h3 class="white">Document Control Management Software</h3>
+                                    <p class="articleTextWhite">Reduces the Document Management effort by 80%</p>
+                                </article>
+                                <div class="buttonHolderHeader">
+                                    <div class="buttonBlue"><a href="product.html">Learn More</a></div>
+                                </div>
+                                <div class="buttonHolderHeader">
+                                    <div class="buttonBlue"><a href="#" data-toggle="modal" data-target="#demoModal">Request Demo</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end // Slide -->
+                <!-- Slide -->
+                <div class="backpic1" style="background-image: url('images/slider/peoplequest.jpg');">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 bannerContent">
+                                <article class="articles">
+                                    <h1 class="white">PeopleQuest</h1>
+                                    <h3 class="white">Employee Training &amp; Learning Management Program</h3>
+                                </article>
+                                <div class="buttonHolderHeader">
+                                    <div class="buttonBlue"><a href="#">Learn More</a></div>
+                                </div>
+                                <div class="buttonHolderHeader">
+                                    <div class="buttonBlue"><a href="#" data-toggle="modal" data-target="#demoModal">Request Demo</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end // Slide -->
+                <!-- Slide -->
+                <div class="backpic1" style="background-image: url('images/slider/prrquest.jpg');">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 bannerContent">
+                                <article class="articles">
+                                    <h1 class="white">PRRQuest</h1>
+                                    <h3 class="white">Corrective and Preventive Action (CAPA) Software System</h3>
+                                    <p class="articleTextWhite">
+                                        Problem Reporting and Resolution - simple and effective CAPA Management System.
+                                        <br /><br />Reduce the administrative cycle time from Report Initiation to Effective Closure
+                                    </p>
+                                </article>
+                                <div class="buttonHolderHeader">
+                                    <div class="buttonBlue"><a href="#">Learn More</a></div>
+                                </div>
+                                <div class="buttonHolderHeader">
+                                    <div class="buttonBlue"><a href="#" data-toggle="modal" data-target="#demoModal">Request Demo</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end // Slide -->
+                <!-- Slide -->
+                <div class="backpic1" style="background-image: url('images/slider/auditquest.jpg');">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 bannerContent">
+                                <article class="articles">
+                                    <h1 class="white">AuditQuest</h1>
+                                    <h3 class="white">Quality Audit Management System</h3>
+                                    <p class="articleTextWhite">Explore flexible workflows for master audit scheduling, planning, execution, reporting, post audit improvement and review process</p>
+                                </article>
+                                <div class="buttonHolderHeader">
+                                    <div class="buttonBlue"><a href="#">Learn More</a></div>
+                                </div>
+                                <div class="buttonHolderHeader">
+                                    <div class="buttonBlue"><a href="#" data-toggle="modal" data-target="#demoModal">Request Demo</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end // Slide -->
+                <!-- Slide -->
+                <div class="backpic1" style="background-image: url('images/slider/gagequest.png');">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 bannerContent">
+                                <article class="articles">
+                                    <h1 class="white">GageQuest</h1>
+                                    <h3 class="white">Calibration Control Software &amp; Gage Calibration Program</h3>
+                                </article>
+                                <div class="buttonHolderHeader">
+                                    <div class="buttonBlue"><a href="#">Learn More</a></div>
+                                </div>
+                                <div class="buttonHolderHeader">
+                                    <div class="buttonBlue"><a href="#" data-toggle="modal" data-target="#demoModal">Request Demo</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end // Slide -->
+
+            </div>
+            <!-- end // Main Slider -->
+
+        </div>
+    </header>
+
+
+    <!-- List of Products -->
+    <div id="characteristicsWrap">
+        <div class="container">
+            <h2 class="white text-center">Business Processes Management Software</h2>
+            <h4 class="white text-center">For more than 20 years the ISOQuest Family serves to optimize the management effort on the main daily business activities such as:</h4>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="iconHolder">
+                        <img src="images/features/document-xxl.png" class="iconsStyle col-md-4" />
+                        <div class="iconsText col-md-8"><h4 class="white textPosition1">Document Control Management</h4></div>
+                    </div>
+                    <div class="iconHolder">
+                        <img src="images/features/training.png" class="iconsStyle col-md-4" />
+                        <div class="iconsText col-md-8"><h4 class="white textPosition1">Personnel Training Program</h4></div>
+                    </div>
+                    <div class="iconHolder">
+                        <img src="images/features/action-tracking.png" class="iconsStyle col-md-4" />
+                        <div class="iconsText col-md-8"><h4 class="white textPosition1">NCR and CAPA Management</h4></div>
+                    </div>
+                    <div class="iconHolder">
+                        <img src="images/features/management.png" class="iconsStyle col-md-4" />
+                        <div class="iconsText col-md-8"><h4 class="white textPosition1">Customer &amp; Supplier Management</h4></div>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="iconHolder">
+                        <img src="images/features/internal-auditing.png" class="iconsStyle col-md-4" />
+                        <div class="iconsText col-md-8"><h4 class="white textPosition1">Audit Management</h4></div>
+                    </div>
+                    <div class="iconHolder">
+                        <img src="images/features/maintenance.png" class="iconsStyle col-md-4" />
+                        <div class="iconsText col-md-8"><h4 class="white textPosition1">Gage Calibration and Gage R&amp;R</h4></div>
+                    </div>
+                    <div class="iconHolder">
+                        <img src="images/features/gage-r-and-r.png" class="iconsStyle col-md-4" />
+                        <div class="iconsText col-md-8"><h4 class="white textPosition1">PLM, APQP and PPAP</h4></div>
+                    </div>
+                    <div class="iconHolder">
+                        <img src="images/features/continuous-improvement.png" class="iconsStyle col-md-4" />
+                        <div class="iconsText col-md-8"><h4 class="white textPosition1">Continuous Improvement</h4></div>
+                    </div>
+                    <!--
+                    <div class="iconHolder">
+                        <img src="images/document-control.png" class="iconsStyle"/>
+                        <div class="iconsText"><h3 class="white textPosition1">FMEA Document Control</h3></div>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end // List of Products -->
+    <!-- Company Icons -->
+    <div id="aboutUsIconsWrap">
+        <div class="container">
+            <h2 class="text-center blue">Quality software solution provider you can trust</h2>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                    <div class="aboutUsIconHolder">
+                        <a href="about.html"><img class="pulseIcon" src="images/icons/foundedInNewIcon.png" /></a>
+                        <h4 class="blue textPosition">Company founded back in 1995</h4>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                    <div class="aboutUsIconHolder">
+                        <a href="about.html"><img class="pulseIcon" src="images/icons/usersAndGrowingIcon.png" /></a>
+                        <h4 class="blue textPosition">150,000 users and growing</h4>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                    <div class="aboutUsIconHolder">
+                        <a href="about.html"><img class="pulseIcon" src="images/icons/releaseCycleIcon.png" /></a>
+                        <h4 class="blue textPosition">2 months<br />release cycle</h4>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                    <div class="aboutUsIconHolder">
+                        <a href="about.html"><img class="pulseIcon" src="images/icons/supportAndResponceIcon.png" /></a>
+                        <h4 class="blue textPosition">24/7 support desk<br />30min response time</h4>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                    <div class="aboutUsIconHolder">
+                        <a href="about.html"><img class="pulseIcon" src="images/icons/onlineTrainigIcon.png" /></a>
+                        <h4 class="blue textPosition">Online training and consulting</h4>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                    <div class="aboutUsIconHolder">
+                        <a href="about.html"><img class="pulseIcon" src="images/icons/platformNewIcon.png" /></a>
+                        <h4 class="blue textPosition">Platform available on the web, tablet and mobile</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end // Company Icons -->
+    <!-- Implementation Process Icons -->
+    <div id="aboutUsIconsOrangeWrap">
+        <div class="container">
+            <h2 class="white text-center">Implementation process tailored to your needs</h2>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="circle"><h4 class="white">Business Needs Analysis</h4></div>
+                    <div class="aboutUsIconsOrangeHolder">
+                        <ul class="articleTextWhite paddingStyle">
+                            <li>Identify existing workflows and process improvements needed</li>
+                            <li>Identify requirements for training</li>
+                            <li>Obtain data required for system configuration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="circle"><h4 class="white">Training and Deployment</h4></div>
+                    <div class="aboutUsIconsOrangeHolder">
+                        <ul class="articleTextWhite paddingStyle">
+                            <li>Environment setup, configuration and testing</li>
+                            <li>Personnel training - on-site or online</li>
+                            <li>Import existing data</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="circle"><h4 class="white">Continual Support and Consulting</h4></div>
+                    <div class="aboutUsIconsOrangeHolder">
+                        <ul class="articleTextWhite paddingStyle">
+                            <li>Weekly support meetings</li>
+                            <li>Refresher training webinars</li>
+                            <li>Audit of usage level. Requests for enhancements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end // Implementation Process Icons -->
+    <!-- Client Logos Slider -->
+    <div id="clientsListWrap">
+        <div class="clientsTitle"><h2 class="blue textPosition">Industry leaders choose ISOQuest</h2></div>
+        <div class="clientsSliderHolder">
+            <img src="images/previous-arrow-blue.png" class="previousArrow" />
+            <img src="images/next-arrow-blue.png" class="nextArrow" />
+            <div class="container">
+                <div class="row sliderSlick">
+	                <div class="clientsSlider">
+	                    <img src="images/client-logos/logo_agc.jpg" />
+	                </div>
+	                <div class="clientsSlider">
+	                    <img src="images/client-logos/logo_colfax.jpg" />
+	                </div>
+	                <div class="clientsSlider">
+	                    <img src="images/client-logos/logo_degussa.png" />
+	                </div>
+	                <div class="clientsSlider">
+	                    <img src="images/client-logos/logo_evonik.png" />
+	                </div>
+	                <div class="clientsSlider">
+	                    <img src="images/client-logos/logo_flowserve.jpg" />
+	                </div>
+	                <div class="clientsSlider">
+	                    <img src="images/client-logos/logo_honda.png" />
+	                </div>
+	                <div class="clientsSlider">
+	                    <img src="images/client-logos/logo_lear.png" />
+	                </div>
+	                <div class="clientsSlider">
+	                    <img src="images/client-logos/logo_lpag.svg" />
+	                </div>
+	                <div class="clientsSlider">
+	                    <img src="images/client-logos/logo_masterloy.png" />
+	                </div>
+	                <div class="clientsSlider">
+	                    <img src="images/client-logos/logo_omg.png" />
+	                </div>
+	                <div class="clientsSlider">
+	                    <img src="images/client-logos/logo_schukra.png" />
+	                </div>
+	                <div class="clientsSlider">
+	                    <img src="images/client-logos/logo_trelleborg.png" />
+	                </div>
+	                <div class="clientsSlider">
+	                    <img src="images/client-logos/logo_umicore.png" />
+	                </div>
+	                <div class="clientsSlider">
+	                    <img src="images/client-logos/logo_vigon.jpg" />
+	                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end // Clients Slider -->
+    <!-- Client Testimonials Slider -->
+    <div id="clientsQuotes">
+    	<img src="images/previous-arrow-white.png" class="previousArrowTestim" />
+        <img src="images/next-arrow-white.png" class="nextArrowTestim" />
+        <div class="container">
+            <div class="row">
+            	<div class="testimonialsSlider">
+	                <div class="col-xs-12 col-sm-12 col-md-12 pull-left">
+	                    <blockquote>
+	                        <i class="fa fa-quote-left white"></i>
+	                        <p class="whiteQuote">
+                            ISOQuest is one of the best multifunctional, integrated packages for QA and related tools. The integration and the high automatic features make this <strong>an exceptional package</strong> for any company.
+	                        </p>
+	                        <br />
+	                        <small class="white"><b>Ivan Brinovcar</b>, QS9000 Management Representative, General Seating of Canada</small>
+	                    </blockquote>
+	                </div>
+	                <div class="col-xs-12 col-sm-12 col-md-12 pull-left">
+	                    <blockquote>
+	                        <i class="fa fa-quote-left white"></i>
+	                        <p class="whiteQuote">
+                                While other products appeared to adequately meet our needs, we felt that ISOQuest would best meet our needs in the areas of user interface, functionality, cost, training and support – and GQI has delivered.
+                                <br/>ISO Quest played a major role in helping us obtain ISO 9002 certification in a very short timeframe. However, software alone does not make a complete quality system. The technical support and training that was provided by GQI was also fundamental in our success. Not only were we able to achieve ISO 9002 certification, but I believe that we now have in place a <strong>top notch quality system</strong> that will enable us to maintain this preferred status.
+	                        </p>
+	                        <br />
+	                        <small class="white"><b>Richard D. Nelson</b>, Manager Special Projects, The Electron Corp.</small>
+	                    </blockquote>
+	                </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 pull-left">
+                        <blockquote>
+                            <i class="fa fa-quote-left white"></i>
+                            <p class="whiteQuote">
+                                We found GQI’s ISOQuest software was closest in meeting our requirements for complete management of the documents and training, ease of use, document linking, and pricing for site use, set-up, training and maintenance.
+                                <br /> The installation and training were well received. Personnel who attended training could <strong>immediately see the benefits</strong> of the ISOQuest system versus the current paper system. We are <strong>very pleased</strong> with how ISOQuest is working.
+                            </p>
+                            <br />
+                            <small class="white"><b>Linda Dodd</b>, QA Manager, Leiner-Davis Gelatin</small>
+                        </blockquote>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 pull-left">
+                        <blockquote>
+                            <i class="fa fa-quote-left white"></i>
+                            <p class="whiteQuote">
+                                ISOQuest has <strong>reduced the costs</strong> of maintaining our quality system while at the same time improving it. In my department alone, the software has allowed my Quality System Administrator to assume additional tasks as she now longer is required to devote all of her time to quality system maintenance. Also, the ease of use has allowed all departments to utilize the ISOQuest software to enhance their area of the quality system, involving our overall quality without significant investment.
+                            </p>
+                            <br />
+                            <small class="white"><b>Paul Roppel</b>, Quality Manager, DMC-2 Canada Corp.</small>
+                        </blockquote>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 pull-left">
+                        <blockquote>
+                            <i class="fa fa-quote-left white"></i>
+                            <p class="whiteQuote">
+                                The service provided by GQI is <strong>impeccable</strong>. From initial training and setup, to integration with our networks, to additional specialized programming, GQI personnel have be professional and have worked closely with DMC-2 personnel to ensure the success of the ISOQuest software.
+                            </p>
+                            <br />
+                            <small class="white"><b>Paul Roppel</b>, Quality Manager, DMC-2 Canada Corp.</small>
+                        </blockquote>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 pull-left">
+                        <blockquote>
+                            <i class="fa fa-quote-left white"></i>
+                            <p class="whiteQuote">
+                                I am personally very pleased with ISOQuest, and with the responsiveness with which you have made changes requested by us.
+                                <br />The feedback from users has been consistently positive.
+                            </p>
+                            <br />
+                            <small class="white"><b>Robin Dhillon</b>, Manager PMCC and ISO Quality Office, BMO (Bank of Montreal)</small>
+                        </blockquote>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 pull-left">
+                        <blockquote>
+                            <i class="fa fa-quote-left white"></i>
+                            <p class="whiteQuote">
+                                GQI has <strong>exceeded our expectations</strong> in every way. Their customer support is outstanding and the software is maintenance free, our IT department calls it "Hands Off" software. The Quality Assurance Group is now able to focus on the content of the system rather than upkeep and trouble shooting.
+                            </p>
+                            <br />
+                            <small class="white"><b>Frederick Smith</b>, Quality Engineer, H. C. Starck Inc.</small>
+                        </blockquote>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 pull-left">
+                        <blockquote>
+                            <i class="fa fa-quote-left white"></i>
+                            <p class="whiteQuote">
+                                Based on our evaluations and risk assessments, ISOQuest was the <strong>best fit for our company</strong>.
+                                <br />Since we have installed ISOQuest at our facility, our document control system has received commendations in ISO and Safety audits on its use at all levels of our facility, ease of access of procedures and detailed training records for employees.
+                            </p>
+                            <br />
+                            <small class="white"><b>Ralph M Stevens</b>, Training Coordinator, CYRO Industries</small>
+                        </blockquote>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 pull-left">
+                        <blockquote>
+                            <i class="fa fa-quote-left white"></i>
+                            <p class="whiteQuote">
+                                I would highly recommend this product filled with <strong>amazing workflow solutions</strong> to any company that is looking to streamline their critical business processes. The DocuQuest and PeopleQuest modules are the solution to building  training and talent development plans and measuring the effectiveness of training.  ISOQuest is user friendly and the GQI support is superior! 
+                            </p>
+                            <br />
+                            <small class="white"><b>Theresa McMorrow Jordan</b>, HR Training and Development Consultant, AGC Glass Company North America</small>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end // Client Testimonials Slider -->
+    <!-- Footer -->
+    <div id="contactForm">
+	    <div class="container">
+		    <div class="row">
+		    	<h2 class="white text-center">Contact us to find out more</h2>
+		    	<div class="col-md-12">
+		    		<form>
+			    		<div class="col-md-6 col-sm-6 col-xs-12">
+			    			<input type="text" class="contactFormInput" placeholder="Name" />
+			    		</div>
+			    		<div class="col-md-6 col-sm-6 col-xs-12">
+			    			<input type="text" class="contactFormInput" placeholder="Business email" />
+			    		</div>
+			    		<div class="col-md-12 col-sm-12 col-xs-12">
+			    			<textarea class="contactFormInput" placeholder="Message"></textarea>
+			    			<div class="text-center">
+			    				<button class="buttonOrange text-center margin15">Send</button>
+			    			</div>
+			    		</div>
+		    		</form>
+		    	</div>
+		    </div>
+	    </div>
+    </div>
+    <footer>
+        <div id="footerBackWrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="contactForm">
+                            <img alt="WorkflowsToday" src="images/logoWhite.png" class="logoFooter" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="footerMenus">
+                            <div class="menuTextfooter white"><b>Phone:</b> 	+1 888-238-9051</div>
+                            <div class="menuTextfooter white"><b>Fax:</b> 	+1 877-207-3405</div>
+                            <div class="menuTextfooter white"><b>Email:</b> 	sales@gqigroup.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end // Footer -->
+</body>
+</html>
